@@ -1,0 +1,9 @@
+# Keep Markdown maintenance documents local, at every directory depth.
+*.[mM][dD]
+artifacts/
+node_modules/
+.env
+docs/
+
+# The root usage README is the only Markdown file intended for Git.
+!/README.md
