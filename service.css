@@ -1,0 +1,35 @@
+/* Original content layouts within the shared V2 shell. */
+footer .service-footer-heading{justify-content:flex-start;gap:4px 8px}
+.hero-pill{margin-top:18px}
+.region-layout{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:18px;align-items:center}
+.region-card{padding:22px;border:1px solid var(--line);border-radius:10px;background:#f7fbfa;align-self:stretch}
+.region-card .eyebrow{margin-top:16px}
+.region-card h4,.profile-copy h4{font-size:1.1rem;margin:8px 0}
+.region-link{display:flex;justify-content:center}
+.copy-nodes{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.copy-nodes span{border:1px dashed #9bbfb7;padding:8px;border-radius:6px;font-size:.8rem;background:white}
+.section-copy{margin:18px 0}
+.grid.three-col,.signal-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid.three-col>div,.signal-card{padding:18px;background:#f7fbfa;border:1px solid var(--line);border-radius:10px}
+.grid.three-col h3{margin:10px 0 6px}
+.signal-card h4{margin:12px 0 6px;font-size:1rem}
+.signal-card p,.grid.three-col p{font-size:.9rem}
+.bars{height:240px;display:flex;align-items:flex-end;gap:18px;padding:30px 12px 0;border-bottom:1px solid var(--line);margin-top:24px}
+.bars>div{position:relative;flex:1;background:#146b63;border-radius:6px 6px 0 0;min-width:0}
+.bars span{position:absolute;top:-28px;width:100%;text-align:center;font-size:.85rem;font-weight:600}
+.chart-labels{display:flex;justify-content:space-between;font-size:.8rem;margin-top:10px;color:var(--muted)}
+.security-layers{display:grid;gap:12px}
+.security-layer{display:flex;align-items:flex-start;gap:16px;padding:18px;border:1px solid var(--line);border-radius:10px;background:#f7fbfa}
+.security-layer>span:first-child{font-size:.8rem;font-weight:700;color:var(--teal);padding-top:12px}
+.security-layer h4{font-size:1rem;margin:0 0 6px}
+.security-layer p{font-size:.9rem}
+.regional-endpoints{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}
+.regional-endpoint .routing{border-top:2px solid #8dbbb0;padding-top:12px}
+.regional-endpoint.interrupted .routing{border-top-style:dashed;border-color:#b75c49}
+.regional-endpoint.interrupted .node{background:#fff0ec;border-color:#d5a496}
+.regional-endpoint .flow{height:calc(100% - 76px)}
+.regional-recovery>.flow>.node{flex:0 1 360px;margin:auto}
+.runbook strong{display:block}
+@media(min-width:1001px){#scenario-panel .flow-connector{flex-basis:100px}}
+@media(max-width:1000px){.grid.three-col,.signal-cards{grid-template-columns:1fr}.region-layout{grid-template-columns:1fr}.region-link{padding:5px}.regional-endpoints{gap:14px}}
+@media(max-width:600px){.regional-endpoints{grid-template-columns:1fr}.regional-endpoint .flow{height:auto}.security-layer{gap:10px;padding:14px}.security-layer>span:first-child{display:none}.bars{gap:12px}}

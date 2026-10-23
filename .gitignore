@@ -1,9 +1,17 @@
 # Keep Markdown maintenance documents local, at every directory depth.
 *.[mM][dD]
-artifacts/
+/artifacts/
+/docs/
 node_modules/
 .env
-docs/
+.env.*
+!.env.example
+*.log
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+Thumbs.db
 
 # The root usage README is the only Markdown file intended for Git.
 !/README.md

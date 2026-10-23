@@ -1,0 +1,2939 @@
+{
+  "original": {
+    "pageData": {
+      "overview": {
+        "nav": "Overview",
+        "title": "Overview",
+        "icon": "layout-dashboard",
+        "eyebrow": "Oracle NoSQL Database Cloud Service",
+        "pill": "Applications first. Infrastructure managed.",
+        "heroTitle": "Bring responsive experiences closer to everyone.",
+        "summary": "Keep application teams focused on device, player, and member experiences—with a clear plan for growth, resilience, and ownership.",
+        "references": [
+          "concepts",
+          "features",
+          "releases"
+        ],
+        "help": [
+          [
+            "OCI NoSQL",
+            "Oracle NoSQL Database Cloud Service: managed tables for key-value, document, and typed data."
+          ],
+          [
+            "Table",
+            "Rows identified by a primary key. A JSON column can hold flexible document content."
+          ],
+          [
+            "Static showcase",
+            "Every example is synthetic. No cloud connection, telemetry, or resource change is made."
+          ]
+        ]
+      },
+      "availability": {
+        "nav": "Availability",
+        "title": "Availability & scale",
+        "icon": "network",
+        "eyebrow": "Throughput, placement & workload fit",
+        "pill": "Grow with a deliberate capacity model",
+        "heroTitle": "Meet changing demand without managing servers.",
+        "summary": "Choose how to fund throughput and where data should live, while keeping application freshness and regional access requirements visible.",
+        "references": [
+          "concepts",
+          "features",
+          "global",
+          "endpoints"
+        ],
+        "help": [
+          [
+            "Read and Write Units",
+            "Throughput accounting depends on operation and data size; request count alone is not capacity."
+          ],
+          [
+            "On-demand",
+            "The service manages read/write capacity for the table. Service and storage limits still apply."
+          ],
+          [
+            "Global Active Table",
+            "A table replicated asynchronously between regions, with local reads and writes."
+          ],
+          [
+            "Dedicated hosted environment",
+            "Tenancy-dedicated capacity, requested through Oracle. Currently excludes Global Active Tables."
+          ]
+        ]
+      },
+      "recovery": {
+        "nav": "Recovery",
+        "title": "Data protection & disaster recovery",
+        "icon": "cloud-cog",
+        "eyebrow": "Continuity, retained copies & rehearsal",
+        "pill": "Practice the application recovery path",
+        "heroTitle": "Keep a tested path back to service.",
+        "summary": "Plan separately for a regional disruption and for unwanted data changes. The copy you rely on determines the recovery work your team must rehearse.",
+        "references": [
+          "global",
+          "migrator"
+        ],
+        "help": [
+          [
+            "Regional redirection",
+            "The application moves to another configured regional endpoint. It is not a customer-controlled node promotion."
+          ],
+          [
+            "Recovery point",
+            "The data state available after recovery. No measured or guaranteed RPO is provided by this simulation."
+          ],
+          [
+            "Retained export",
+            "Customer-managed files and schema used as recovery input. Retention, capture consistency, and restore validation require a deliberate process."
+          ]
+        ]
+      },
+      "migration": {
+        "nav": "Migration",
+        "title": "Migration & modernization",
+        "icon": "git-branch",
+        "eyebrow": "Data movement & application readiness",
+        "pill": "Validate before changing traffic",
+        "heroTitle": "Move application data with controlled cutover.",
+        "summary": "Choose a manageable migration boundary and prove the new application path before customers depend on it.",
+        "references": [
+          "migrator",
+          "reference",
+          "concepts"
+        ],
+        "help": [
+          [
+            "Migrator",
+            "A source-to-sink data movement utility. A data import is not proof of application compatibility."
+          ],
+          [
+            "Cutover",
+            "A customer-controlled change to application traffic and write ownership after validation."
+          ],
+          [
+            "Display-only samples",
+            "Commands are documentation examples. Executing them separately requires installation, IAM, reviewed configuration, and a demo target."
+          ]
+        ]
+      },
+      "observability": {
+        "nav": "Observability",
+        "title": "Observability & operations",
+        "icon": "activity",
+        "eyebrow": "From a service signal to a decision",
+        "pill": "Start with customer impact",
+        "heroTitle": "Turn table signals into practical action.",
+        "summary": "Connect customer symptoms to table demand and application behavior, then verify whether the chosen change helped.",
+        "references": [
+          "metrics",
+          "audit",
+          "concepts"
+        ],
+        "help": [
+          [
+            "oci_nosql",
+            "The OCI Monitoring namespace for service metrics. Preserve the time window, statistic, and table dimensions."
+          ],
+          [
+            "Throttle count",
+            "A count of throttling exceptions over a period; correlate with the application before diagnosing impact."
+          ],
+          [
+            "Replica lag",
+            "A receiver-side replication signal, expressed in milliseconds. It is neither a global consistency guarantee nor a measured RPO."
+          ],
+          [
+            "Missing samples",
+            "Unknown is not zero. Show No samples or Unavailable and investigate collection separately."
+          ]
+        ]
+      },
+      "security": {
+        "nav": "Security",
+        "title": "Security & governance",
+        "icon": "shield-check",
+        "eyebrow": "Identity, connectivity & data stewardship",
+        "pill": "Make responsibilities explicit",
+        "heroTitle": "Give each application only needed access.",
+        "summary": "Build an adoption boundary that teams can explain: who can use the data, how it is reached, and who owns its lifecycle.",
+        "references": [
+          "security",
+          "policies",
+          "endpoints",
+          "cmek",
+          "audit"
+        ],
+        "help": [
+          [
+            "IAM policy",
+            "Defines which principals may perform which actions on resources in a compartment."
+          ],
+          [
+            "Service endpoint",
+            "A regional access point; configure and validate the application network path. Do not assume a table has a Cache-style private endpoint."
+          ],
+          [
+            "CMEK",
+            "Customer-managed keys require a dedicated environment enabled for that feature and customer key lifecycle management."
+          ],
+          [
+            "Audit boundary",
+            "OCI Audit records supported API activity. It is not presented here as a complete row-read or application audit trail."
+          ]
+        ]
+      },
+      "patterns": {
+        "nav": "Workload patterns",
+        "title": "Workload patterns",
+        "icon": "blocks",
+        "eyebrow": "IoT, gaming & social applications",
+        "pill": "Follow the data behind the experience",
+        "heroTitle": "Build around the moments users value.",
+        "summary": "Explore small application stories that connect a data model to a customer outcome, with the ownership and tradeoffs in view.",
+        "references": [
+          "concepts"
+        ],
+        "help": [
+          [
+            "Illustrative workload",
+            "A synthetic application design, not a deployed solution or measured performance result."
+          ]
+        ]
+      }
+    },
+    "docs": {
+      "overview": [
+        "Oracle NoSQL documentation",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/index.html"
+      ],
+      "concepts": [
+        "Cloud concepts",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/dtddt/cloud-concepts.html"
+      ],
+      "features": [
+        "Service features & dedicated environments",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/mmmmq/"
+      ],
+      "global": [
+        "Global Active Tables",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/dtddt/global-active-tables-in-ndcs.html"
+      ],
+      "migrator": [
+        "NoSQL Database Migrator",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/cjphq/index.html"
+      ],
+      "metrics": [
+        "Monitoring OCI NoSQL",
+        "https://docs.oracle.com/en-us/iaas/nosql-database/doc/monitoring-ndcs1.html"
+      ],
+      "security": [
+        "NoSQL security model",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/ttxsq/index.html"
+      ],
+      "policies": [
+        "NoSQL IAM policy reference",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/odsql/"
+      ],
+      "cmek": [
+        "Customer-managed encryption keys",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/icxer/index.html"
+      ],
+      "endpoints": [
+        "Regions, endpoints & subscription",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/fnsxl/index.html"
+      ],
+      "audit": [
+        "OCI Audit overview",
+        "https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm"
+      ],
+      "releases": [
+        "NoSQL release notes",
+        "https://docs.oracle.com/en-us/iaas/releasenotes/services/nosql-database-cloud/"
+      ],
+      "changes": [
+        "OCI service changes",
+        "https://docs.oracle.com/en-us/iaas/Content/servicechanges.htm"
+      ],
+      "reference": [
+        "Data types & DDL reference",
+        "https://docs.oracle.com/en/cloud/paas/nosql-cloud/rnpxl/"
+      ],
+      "examples": [
+        "Oracle NoSQL examples",
+        "https://github.com/oracle/nosql-examples"
+      ]
+    },
+    "comparisons": {
+      "capacity": {
+        "headers": [
+          "Choice",
+          "Best fit",
+          "What you control",
+          "Consideration"
+        ],
+        "rows": [
+          [
+            "Provisioned tables",
+            "Demand you can estimate and review",
+            "Read Units, Write Units, and storage",
+            "Monitor throttling and revise allocations as usage changes."
+          ],
+          [
+            "On-demand tables",
+            "Variable or initially uncertain demand",
+            "Storage, data design, application behavior",
+            "Automatic throughput management does not remove service limits or cost review."
+          ],
+          [
+            "Global Active Tables",
+            "Local access in multiple regions or regional continuity",
+            "Replica placement and application routing",
+            "Asynchronous convergence, frozen schema, and conflict behavior must fit the workload."
+          ],
+          [
+            "Dedicated hosted environment",
+            "Tenancy isolation or unusually demanding capacity",
+            "A separately requested dedicated environment",
+            "Evaluate commercial terms and readiness with Oracle; Global Active Tables are currently unsupported."
+          ]
+        ]
+      },
+      "recovery": {
+        "headers": [
+          "Pattern",
+          "Recovery-point posture",
+          "Recovery-time posture",
+          "Best fit / operator action"
+        ],
+        "rows": [
+          [
+            "Regional redundancy",
+            "Managed in-region data copies",
+            "Managed service response; application retries still matter",
+            "Local infrastructure faults; observe application results."
+          ],
+          [
+            "Global Active Tables",
+            "Remote state may lag recent writes",
+            "Depends on detection, routing, reconnection, and validation",
+            "Regional disruption; prepare replicas and redirect application traffic."
+          ],
+          [
+            "Customer-retained export",
+            "Depends on the selected capture and source-write coordination",
+            "Depends on import volume, capacity, and validation",
+            "Unwanted changes or a recovery rehearsal; select files, import, verify, then route."
+          ]
+        ]
+      },
+      "migration": {
+        "headers": [
+          "Path",
+          "Useful when",
+          "Prerequisites",
+          "Cutover responsibility"
+        ],
+        "rows": [
+          [
+            "File import",
+            "A reviewed data set exists in a supported format",
+            "Mapped keys/types, reviewed configuration, empty target",
+            "Validate imported data and update application routing."
+          ],
+          [
+            "Oracle NoSQL source",
+            "Moving existing NoSQL tables to the cloud",
+            "Accessible source, IAM, cloud compatibility review",
+            "Coordinate concurrent changes and reconcile the transfer."
+          ],
+          [
+            "Phased application adoption",
+            "A workload can move independently",
+            "Explicit write ownership and application routing",
+            "Customer-designed rollout and rollback; not automatic CDC."
+          ]
+        ]
+      },
+      "security": {
+        "headers": [
+          "Control",
+          "Protection",
+          "Customer responsibility",
+          "Consideration"
+        ],
+        "rows": [
+          [
+            "IAM and compartments",
+            "Scoped access to tables and operations",
+            "Define principals and least-privilege policies",
+            "Separate inspect, read, and write/manage permissions."
+          ],
+          [
+            "HTTPS and network path",
+            "Encrypted transport to the service",
+            "Configure endpoint, routes, egress, and client trust",
+            "Validate service-gateway eligibility and regional connectivity."
+          ],
+          [
+            "Encryption at rest",
+            "Stored data encryption managed by the service",
+            "Select the supported key ownership model",
+            "CMEK needs a specifically enabled dedicated environment."
+          ],
+          [
+            "Data lifecycle and evidence",
+            "Retention policy and traceable supported API activity",
+            "Set expiry/retention; retain application evidence",
+            "Expiry is not archival; Audit is not a complete data-access log."
+          ]
+        ]
+      }
+    },
+    "reviewDate": "22 September 2026",
+    "fixtureVersion": "1.0.0",
+    "observationSamples": {
+      "id": "operations.chart.v1",
+      "version": "1.0.0",
+      "illustrative": true,
+      "unit": "ReadUnits per one-minute window",
+      "values": [
+        20,
+        35,
+        65,
+        90,
+        55,
+        30
+      ]
+    },
+    "operationData": {
+      "detect": {
+        "id": "operations.detect.v1",
+        "title": "Start with the customer symptom",
+        "summary": "Pair request errors and latency from your application with the relevant table metrics.",
+        "signals": [
+          [
+            "Read / write throttles",
+            "Counts of throttling exceptions over a selected period.",
+            "triangle-alert"
+          ],
+          [
+            "Consumed units",
+            "ReadUnits and WriteUnits over the observation window.",
+            "gauge"
+          ],
+          [
+            "Application latency",
+            "Application instrumentation; not inferred from table capacity.",
+            "timer"
+          ]
+        ],
+        "steps": [
+          [
+            "Scope",
+            "Identify the affected operation, table, region, and time."
+          ],
+          [
+            "Correlate",
+            "Compare errors, consumed units, and throttles."
+          ],
+          [
+            "Escalate",
+            "Page the owner using a tested alarm and notification route."
+          ]
+        ]
+      },
+      "investigate": {
+        "id": "operations.investigate.v1",
+        "title": "Find what changed in the access path",
+        "summary": "Check query shape, hot keys, payloads, and regional behavior before choosing a remedy.",
+        "signals": [
+          [
+            "Table dimensions",
+            "Filter the metric stream to the intended table and region.",
+            "filter"
+          ],
+          [
+            "Replica lag",
+            "Receiver-side milliseconds; interpret with sender context.",
+            "globe"
+          ],
+          [
+            "Request evidence",
+            "Use application logs and supported API audit records appropriately.",
+            "logs"
+          ]
+        ],
+        "steps": [
+          [
+            "Compare",
+            "Inspect baseline and incident windows."
+          ],
+          [
+            "Inspect",
+            "Review queries, key distribution, and client retries."
+          ],
+          [
+            "Separate",
+            "Distinguish missing telemetry from measured inactivity."
+          ]
+        ]
+      },
+      "improve": {
+        "id": "operations.improve.v1",
+        "title": "Make a change you can evaluate",
+        "summary": "Choose a scoped capacity or application adjustment, then compare customer outcomes.",
+        "signals": [
+          [
+            "Capacity fit",
+            "Revisit mode and provisioned limits against observed demand.",
+            "sliders-horizontal"
+          ],
+          [
+            "Data access",
+            "Review indexes, row size, key distribution, and request patterns.",
+            "database"
+          ],
+          [
+            "Outcome",
+            "Confirm errors and latency improve without unexpected cost.",
+            "check-check"
+          ]
+        ],
+        "steps": [
+          [
+            "Hypothesize",
+            "State the cause and expected effect."
+          ],
+          [
+            "Change",
+            "Apply through your normal approved operating process."
+          ],
+          [
+            "Verify",
+            "Compare the same observation window and statistic."
+          ]
+        ]
+      }
+    },
+    "samples": {
+      "export": "# Bash · Oracle NoSQL Database Migrator 1.8.0\n# Review a cloud-source → file-sink configuration first.\n./runMigrator --config ./export-demo.json",
+      "import": "# Bash · Oracle NoSQL Database Migrator 1.8.0\n# Review a file-source → cloud-sink configuration first.\n./runMigrator --config ./import-demo.json",
+      "records": [
+        {
+          "id": "device-017",
+          "document": {
+            "temperatureC": 21,
+            "zone": "north"
+          }
+        },
+        {
+          "id": "device-018",
+          "document": {
+            "temperatureC": 24,
+            "zone": "south"
+          }
+        }
+      ],
+      "ddl": "CREATE TABLE demo_devices (\n  id STRING,\n  document JSON,\n  PRIMARY KEY (id)\n)",
+      "read": "SELECT d.id, d.document\nFROM demo_devices d\nWHERE d.id = \"device-017\""
+    },
+    "scenarios": {
+      "regional": {
+        "id": "recovery.regional.v1",
+        "label": "Regional disruption",
+        "title": "Keep another region ready to serve",
+        "summary": "Global Active Tables provide writable regional replicas. Your application needs a tested policy for choosing another region when its usual endpoint cannot be reached.",
+        "nodes": [
+          [
+            "app-window",
+            "Application",
+            "Customer routing policy",
+            "violet"
+          ],
+          [
+            "database",
+            "Region A endpoint",
+            "Regional table replica",
+            "teal"
+          ],
+          [
+            "database",
+            "Region B endpoint",
+            "Regional table replica",
+            "teal"
+          ]
+        ],
+        "edges": [
+          "Local requests",
+          "Asynchronous replication"
+        ],
+        "stages": [
+          {
+            "title": "Serve locally",
+            "text": "Both regional replicas can accept reads and writes. The illustrated application uses Region A.",
+            "statuses": [
+              "Uses Region A",
+              "Read / write",
+              "Read / write"
+            ],
+            "active": 1
+          },
+          {
+            "title": "Detect disruption",
+            "text": "Region A is unreachable from this application. Retry and timeout handling belongs to the client; recent remote updates may not yet be visible in Region B.",
+            "statuses": [
+              "Request interrupted",
+              "Unreachable in this scenario",
+              "Still read / write"
+            ],
+            "active": 0,
+            "broken": true
+          },
+          {
+            "title": "Redirect the application",
+            "text": "The customer routing policy selects the Region B endpoint. Region B is already writable; there is no customer-operated replica promotion.",
+            "statuses": [
+              "Reconnects to Region B",
+              "Unreachable in this scenario",
+              "Serves application requests"
+            ],
+            "active": 2,
+            "redirected": true
+          },
+          {
+            "title": "Validate and reconcile",
+            "text": "Check business operations and replication after connectivity returns. Investigate conflicting updates before returning traffic under your policy.",
+            "statuses": [
+              "Validates business results",
+              "Connectivity restored",
+              "Continues serving"
+            ],
+            "active": 2,
+            "redirected": true
+          }
+        ],
+        "runbook": [
+          [
+            "Prepare",
+            "Create eligible replicas and test regional access."
+          ],
+          [
+            "Detect",
+            "Correlate client errors and regional signals."
+          ],
+          [
+            "Redirect",
+            "Apply your application routing and retry policy."
+          ],
+          [
+            "Reconcile",
+            "Validate data freshness and recovered-region behavior."
+          ]
+        ],
+        "source": "global",
+        "defaultStage": 0,
+        "illustrative": true
+      },
+      "export": {
+        "id": "recovery.export.v1",
+        "label": "Retained export",
+        "title": "Recover from a deliberately retained copy",
+        "summary": "A customer-managed Migrator export provides a separate recovery input. Decide when to capture it, where to retain it, and how to validate an import before an incident.",
+        "nodes": [
+          [
+            "database",
+            "Source table",
+            "Coordinate capture",
+            "teal"
+          ],
+          [
+            "archive",
+            "Retained files",
+            "Customer retention policy",
+            "amber"
+          ],
+          [
+            "database",
+            "Recovery table",
+            "Isolated validation target",
+            "green"
+          ]
+        ],
+        "edges": [
+          "Export",
+          "Import"
+        ],
+        "stages": [
+          {
+            "title": "Choose a capture boundary",
+            "text": "Coordinate source writes and the export scope. Do not assume an online export is a transactionally consistent snapshot.",
+            "statuses": [
+              "Capture plan agreed",
+              "Destination prepared",
+              "Empty target"
+            ],
+            "active": 0
+          },
+          {
+            "title": "Export and retain",
+            "text": "Run the documented Migrator workflow. Protect the files and schema, record capture context, and check completion and error counts.",
+            "statuses": [
+              "Read by Migrator",
+              "Copy retained",
+              "Empty target"
+            ],
+            "active": 1
+          },
+          {
+            "title": "Import separately",
+            "text": "Restore the selected files into an empty demo/recovery target using a reviewed schema and permissions. This writes rows and consumes capacity.",
+            "statuses": [
+              "Original unchanged by restore",
+              "Selected recovery input",
+              "Importing rows"
+            ],
+            "active": 2
+          },
+          {
+            "title": "Validate before routing",
+            "text": "Compare counts, keys, values, indexes, and expiry semantics. Only then decide whether to route application traffic to the recovery target.",
+            "statuses": [
+              "Reference retained",
+              "Evidence retained",
+              "Application checks passed"
+            ],
+            "active": 2
+          }
+        ],
+        "runbook": [
+          [
+            "Capture",
+            "Document source-write coordination and copy time."
+          ],
+          [
+            "Retain",
+            "Govern files, schema, access, and retention."
+          ],
+          [
+            "Restore",
+            "Import into an empty isolated target."
+          ],
+          [
+            "Validate",
+            "Check data and application behavior before cutover."
+          ]
+        ],
+        "source": "migrator",
+        "defaultStage": 0,
+        "illustrative": true
+      },
+      "file": {
+        "id": "migration.file.v1",
+        "label": "File import",
+        "title": "Bring a reviewed data set into NoSQL",
+        "summary": "Use supported JSON or CSV inputs with NoSQL Database Migrator. Rework keys and schema before import; an accepted file format does not establish application compatibility.",
+        "nodes": [
+          [
+            "file-json",
+            "Source files",
+            "Synthetic records + schema",
+            "amber"
+          ],
+          [
+            "git-branch",
+            "NoSQL Migrator",
+            "Reviewed configuration",
+            "violet"
+          ],
+          [
+            "database",
+            "Demo target",
+            "Empty NoSQL table",
+            "teal"
+          ]
+        ],
+        "edges": [
+          "Read records",
+          "Write rows"
+        ],
+        "stages": [
+          {
+            "title": "Map the data",
+            "text": "Choose primary and shard keys; validate field types and required transformations.",
+            "statuses": [
+              "2 synthetic input rows",
+              "Mapping reviewed",
+              "0 rows"
+            ],
+            "active": 0
+          },
+          {
+            "title": "Prepare the target",
+            "text": "Prepare an empty target, scoped access, and capacity. Review configuration before running Migrator outside this showcase.",
+            "statuses": [
+              "2 synthetic input rows",
+              "Configuration ready",
+              "0 rows"
+            ],
+            "active": 1
+          },
+          {
+            "title": "Import the fixture",
+            "text": "The illustrative migration writes both input records without errors. No cloud operation is performed here.",
+            "statuses": [
+              "2 rows read",
+              "2 written · 0 failed",
+              "2 rows"
+            ],
+            "active": 2
+          },
+          {
+            "title": "Check before cutover",
+            "text": "Verify keys, representative values, query behavior, expiry, and application access. Retain a rollback plan.",
+            "statuses": [
+              "Original retained",
+              "Results reconciled",
+              "2 validated rows"
+            ],
+            "active": 2
+          }
+        ],
+        "runbook": [
+          [
+            "Map",
+            "Review keys, types, and transformations."
+          ],
+          [
+            "Prepare",
+            "Scope IAM and use an empty target."
+          ],
+          [
+            "Import",
+            "Reconcile written, skipped, and failed records."
+          ],
+          [
+            "Validate",
+            "Exercise application reads before cutover."
+          ]
+        ],
+        "source": "migrator",
+        "defaultStage": 0,
+        "illustrative": true
+      },
+      "onprem": {
+        "id": "migration.onprem.v1",
+        "label": "Oracle NoSQL source",
+        "title": "Move existing NoSQL data deliberately",
+        "summary": "Migrator can read an on-premises Oracle NoSQL source and write to the cloud service. Validate cloud constraints, access, and application configuration separately.",
+        "nodes": [
+          [
+            "server",
+            "Oracle NoSQL source",
+            "Customer-operated deployment",
+            "amber"
+          ],
+          [
+            "git-branch",
+            "NoSQL Migrator",
+            "Source and sink configuration",
+            "violet"
+          ],
+          [
+            "database",
+            "OCI NoSQL target",
+            "Managed tables",
+            "teal"
+          ]
+        ],
+        "edges": [
+          "Read source",
+          "Import"
+        ],
+        "stages": [
+          {
+            "title": "Assess the source",
+            "text": "Inventory schemas, keys, queries, security, and expiry. Check the cloud target against your application requirements.",
+            "statuses": [
+              "Source inventory",
+              "Mapping planned",
+              "Not serving traffic"
+            ],
+            "active": 0
+          },
+          {
+            "title": "Coordinate the copy",
+            "text": "Arrange network access and permissions. Define a source-write pause or an independently designed change reconciliation process.",
+            "statuses": [
+              "Writes coordinated",
+              "Configuration validated",
+              "Ready for import"
+            ],
+            "active": 1
+          },
+          {
+            "title": "Transfer records",
+            "text": "Run and observe Migrator. Reconcile errors and counts; this demonstration does not claim continuous change capture.",
+            "statuses": [
+              "Source retained",
+              "Transfer examined",
+              "Rows imported"
+            ],
+            "active": 2
+          },
+          {
+            "title": "Validate and switch",
+            "text": "Test SDK authentication, regional endpoints, query behavior, and capacity before application cutover.",
+            "statuses": [
+              "Rollback input retained",
+              "Evidence recorded",
+              "Application validated"
+            ],
+            "active": 2
+          }
+        ],
+        "runbook": [
+          [
+            "Assess",
+            "Inventory schemas and client assumptions."
+          ],
+          [
+            "Coordinate",
+            "Control concurrent source changes."
+          ],
+          [
+            "Transfer",
+            "Check errors and counts."
+          ],
+          [
+            "Switch",
+            "Validate the application and rollback conditions."
+          ]
+        ],
+        "source": "migrator",
+        "defaultStage": 0,
+        "illustrative": true
+      },
+      "phased": {
+        "id": "migration.phased.v1",
+        "label": "Phased adoption",
+        "title": "Move one application boundary at a time",
+        "summary": "A customer-designed rollout can start with an isolated workload. Keep a single documented owner for each write path and define how discrepancies will be resolved.",
+        "nodes": [
+          [
+            "app-window",
+            "Application",
+            "Feature routing",
+            "violet"
+          ],
+          [
+            "database",
+            "Existing store",
+            "Original workload owner",
+            "amber"
+          ],
+          [
+            "database",
+            "OCI NoSQL",
+            "Selected new workload",
+            "teal"
+          ]
+        ],
+        "edges": [
+          "Existing path",
+          "Reviewed data movement"
+        ],
+        "stages": [
+          {
+            "title": "Select a boundary",
+            "text": "Choose an independently testable workload and define its source of truth.",
+            "statuses": [
+              "Original routing",
+              "Owns writes",
+              "Isolated target"
+            ],
+            "active": 0
+          },
+          {
+            "title": "Exercise the new path",
+            "text": "Validate a synthetic or approved test data set. Compare application results before changing traffic.",
+            "statuses": [
+              "Test traffic only",
+              "Owns existing workload",
+              "New path under test"
+            ],
+            "active": 2
+          },
+          {
+            "title": "Shift selected traffic",
+            "text": "The application team controls traffic and write ownership. This is not a built-in NoSQL migration feature.",
+            "statuses": [
+              "Selected traffic shifted",
+              "Retained workload owner",
+              "Owns selected workload"
+            ],
+            "active": 2
+          },
+          {
+            "title": "Review rollback",
+            "text": "Reconcile any changed data before rollback; switching an endpoint alone does not reverse writes.",
+            "statuses": [
+              "Evidence reviewed",
+              "Retention defined",
+              "New writes accounted for"
+            ],
+            "active": 2
+          }
+        ],
+        "runbook": [
+          [
+            "Scope",
+            "Select an isolated workload."
+          ],
+          [
+            "Validate",
+            "Compare representative application results."
+          ],
+          [
+            "Shift",
+            "Change routing and write ownership together."
+          ],
+          [
+            "Observe",
+            "Apply explicit rollback criteria."
+          ]
+        ],
+        "source": "concepts",
+        "defaultStage": 0,
+        "illustrative": true
+      }
+    },
+    "workloads": {
+      "iot": {
+        "id": "patterns.iot.v1",
+        "default": "ingest",
+        "options": [
+          [
+            "ingest",
+            "Device readings"
+          ],
+          [
+            "expiry",
+            "Row expiry"
+          ]
+        ],
+        "ingest": {
+          "title": "Make device context available to applications",
+          "summary": "An ingestion application validates each reading and writes it under a deliberate key. NoSQL stores the row; device identity and input validation belong to the application.",
+          "nodes": [
+            [
+              "radio",
+              "Device",
+              "Synthetic device-017",
+              "amber"
+            ],
+            [
+              "app-window",
+              "Ingestion application",
+              "Validate identity and payload",
+              "violet"
+            ],
+            [
+              "database",
+              "Readings table",
+              "Device + event key",
+              "teal"
+            ]
+          ],
+          "edges": [
+            "Reading",
+            "Write row"
+          ],
+          "output": {
+            "deviceId": "device-017",
+            "eventId": "event-001",
+            "reading": {
+              "temperatureC": 21
+            }
+          },
+          "result": "One illustrative event stored. Reusing a device-only key would overwrite its previous reading; include an event key when history matters."
+        },
+        "expiry": {
+          "title": "Separate operational retention from archives",
+          "summary": "Set a row lifetime for disposable readings. After expiration the row is no longer returned; a separate archival policy is needed if history must survive.",
+          "nodes": [
+            [
+              "database",
+              "Reading row",
+              "Expiry configured",
+              "teal"
+            ],
+            [
+              "clock",
+              "Expiry boundary",
+              "Illustrative time progression",
+              "amber"
+            ],
+            [
+              "search",
+              "Later read",
+              "Expired row unavailable",
+              "violet"
+            ]
+          ],
+          "edges": [
+            "Lifetime elapses",
+            "Read after expiry"
+          ],
+          "output": {
+            "deviceId": "device-017",
+            "result": "No row returned after expiration"
+          },
+          "result": "Expiry is a data-lifecycle choice, not a backup. This illustration makes no promise about physical deletion timing."
+        }
+      },
+      "gaming": {
+        "id": "patterns.gaming.v1",
+        "default": "local",
+        "options": [
+          [
+            "local",
+            "Player profile"
+          ],
+          [
+            "global",
+            "Regional conflict"
+          ]
+        ],
+        "local": {
+          "title": "Load the context behind a player session",
+          "summary": "Read a player document by key. Keep session authorization in the application and choose read consistency according to the business action.",
+          "nodes": [
+            [
+              "gamepad-2",
+              "Player",
+              "Synthetic player-042",
+              "amber"
+            ],
+            [
+              "app-window",
+              "Game application",
+              "Authorizes the request",
+              "violet"
+            ],
+            [
+              "database",
+              "Player table",
+              "Profile document",
+              "teal"
+            ]
+          ],
+          "edges": [
+            "Session request",
+            "Read by key"
+          ],
+          "output": {
+            "playerId": "player-042",
+            "profile": {
+              "displayName": "Nova",
+              "level": 8
+            }
+          },
+          "result": "A profile read does not authorize a purchase or establish a globally consistent wallet."
+        },
+        "global": {
+          "title": "Make concurrent profile changes explicit",
+          "summary": "Two regions update the same player row in this synthetic example. Regional replication resolves the conflict using the later write timestamp.",
+          "nodes": [
+            [
+              "database",
+              "Region A",
+              "Earlier write: blue theme",
+              "teal"
+            ],
+            [
+              "repeat-2",
+              "Regional replication",
+              "Asynchronous conflict resolution",
+              "violet"
+            ],
+            [
+              "database",
+              "Region B",
+              "Later write: green theme",
+              "teal"
+            ]
+          ],
+          "edges": [
+            "Earlier update",
+            "Later update wins"
+          ],
+          "output": {
+            "playerId": "player-042",
+            "theme": "green",
+            "explanation": "Later timestamp wins after convergence"
+          },
+          "result": "The earlier blue-theme update is superseded in this example. Design high-value state around the required correctness rules."
+        }
+      },
+      "social": {
+        "id": "patterns.social.v1",
+        "default": "profile",
+        "options": [
+          [
+            "profile",
+            "Flexible profiles"
+          ],
+          [
+            "regional",
+            "Local regional access"
+          ]
+        ],
+        "profile": {
+          "title": "Let profile details evolve with the product",
+          "summary": "Keep a stable identity key while storing optional profile attributes in JSON. Your application still validates fields and enforces visibility.",
+          "nodes": [
+            [
+              "users",
+              "Member",
+              "Synthetic member-008",
+              "amber"
+            ],
+            [
+              "shield-check",
+              "Social application",
+              "Visibility and validation",
+              "violet"
+            ],
+            [
+              "file-json",
+              "Profile document",
+              "Typed key + JSON fields",
+              "teal"
+            ]
+          ],
+          "edges": [
+            "Profile request",
+            "Authorized data access"
+          ],
+          "output": {
+            "memberId": "member-008",
+            "profile": {
+              "name": "Ari",
+              "interests": [
+                "cycling",
+                "photography"
+              ]
+            }
+          },
+          "result": "Flexible JSON accommodates optional fields. It does not remove access checks or the need to design indexes for query paths."
+        },
+        "regional": {
+          "title": "Serve a traveling member closer to home",
+          "summary": "A regional replica lets the application read and write near a member. A recent change made elsewhere may take time to appear.",
+          "nodes": [
+            [
+              "users",
+              "Traveling member",
+              "Application selects a region",
+              "amber"
+            ],
+            [
+              "database",
+              "Nearby replica",
+              "Local read / write",
+              "teal"
+            ],
+            [
+              "database",
+              "Other region",
+              "Replicated profile",
+              "teal"
+            ]
+          ],
+          "edges": [
+            "Regional request",
+            "Asynchronous replication"
+          ],
+          "output": {
+            "memberId": "member-008",
+            "view": "Nearby regional replica",
+            "freshness": "Remote changes eventually converge"
+          },
+          "result": "Application routing selects the endpoint. Global Active Tables do not automatically route a traveling user."
+        }
+      }
+    },
+    "workloadMetadata": {
+      "iot": {
+        "label": "IoT",
+        "summary": "Turn device readings into usable context.",
+        "sources": [
+          "concepts",
+          "global",
+          "reference"
+        ],
+        "help": {
+          "Illustrative workload": "A synthetic application design, not a deployed solution or measured performance result.",
+          "Shard key": "The primary-key portion used to distribute rows. A hot device or key may concentrate demand.",
+          "Time to live": "A row expiry setting. Expired readings cannot substitute for a separately retained history."
+        },
+        "panelTitle": "IoT · readings with a useful lifetime",
+        "panelSummary": "",
+        "pillar": "Application story · illustrative",
+        "badge": "Synthetic data",
+        "renderer": "iot",
+        "benefits": [
+          "Store flexible device payloads alongside stable identifiers.",
+          "Expire disposable readings according to your data policy."
+        ],
+        "considerations": [
+          "Validate devices and payloads before writing; this page is not an ingestion service.",
+          "Design keys for history and distribution; retain an archive separately if needed."
+        ],
+        "scenarios": {
+          "ingest": {
+            "id": "patterns.iot.v1.ingest",
+            "version": 1,
+            "label": "Device readings",
+            "title": "Make device context available to applications",
+            "summary": "An ingestion application validates each reading and writes it under a deliberate key. NoSQL stores the row; device identity and input validation belong to the application.",
+            "nodes": [
+              [
+                "Device",
+                "Synthetic device-017",
+                "radio",
+                "amber"
+              ],
+              [
+                "Ingestion application",
+                "Validate identity and payload",
+                "app-window",
+                "violet"
+              ],
+              [
+                "Readings table",
+                "Device + event key",
+                "database",
+                "teal"
+              ]
+            ],
+            "edges": [
+              "Reading",
+              "Write row"
+            ],
+            "note": "One illustrative event stored. Reusing a device-only key would overwrite its previous reading; include an event key when history matters.",
+            "json": {
+              "label": "JSON · illustrative outcome",
+              "text": "{\n  \"deviceId\": \"device-017\",\n  \"eventId\": \"event-001\",\n  \"reading\": {\n    \"temperatureC\": 21\n  }\n}",
+              "prerequisites": "Synthetic fixture. This is not a response from OCI."
+            },
+            "sources": [
+              "concepts",
+              "global",
+              "reference"
+            ]
+          },
+          "expiry": {
+            "id": "patterns.iot.v1.expiry",
+            "version": 1,
+            "label": "Row expiry",
+            "title": "Separate operational retention from archives",
+            "summary": "Set a row lifetime for disposable readings. After expiration the row is no longer returned; a separate archival policy is needed if history must survive.",
+            "nodes": [
+              [
+                "Reading row",
+                "Expiry configured",
+                "database",
+                "teal"
+              ],
+              [
+                "Expiry boundary",
+                "Illustrative time progression",
+                "clock",
+                "amber"
+              ],
+              [
+                "Later read",
+                "Expired row unavailable",
+                "search",
+                "violet"
+              ]
+            ],
+            "edges": [
+              "Lifetime elapses",
+              "Read after expiry"
+            ],
+            "note": "Expiry is a data-lifecycle choice, not a backup. This illustration makes no promise about physical deletion timing.",
+            "json": {
+              "label": "JSON · illustrative outcome",
+              "text": "{\n  \"deviceId\": \"device-017\",\n  \"result\": \"No row returned after expiration\"\n}",
+              "prerequisites": "Synthetic fixture. This is not a response from OCI."
+            },
+            "sources": [
+              "concepts",
+              "global",
+              "reference"
+            ]
+          }
+        }
+      },
+      "gaming": {
+        "label": "Gaming",
+        "summary": "Keep player context and correctness aligned.",
+        "sources": [
+          "concepts",
+          "global"
+        ],
+        "help": {
+          "Illustrative workload": "A synthetic application design, not a deployed solution or measured performance result.",
+          "Read consistency": "EVENTUAL may return an older value; ABSOLUTE reads the current regional value. Neither makes asynchronous regional replication globally absolute.",
+          "Concurrent regional writes": "For the same row, timestamp-based conflict resolution can supersede one update. Use a data design that fits the business action."
+        },
+        "panelTitle": "Gaming · player context across regions",
+        "panelSummary": "",
+        "pillar": "Application story · illustrative",
+        "badge": "Synthetic data",
+        "renderer": "gaming",
+        "benefits": [
+          "Read player context through a key-based application path.",
+          "Place regional replicas near distributed player populations."
+        ],
+        "considerations": [
+          "Authorization and high-value game-state rules remain application responsibilities.",
+          "Conflicting regional writes need deliberate modeling and validation."
+        ],
+        "scenarios": {
+          "local": {
+            "id": "patterns.gaming.v1.local",
+            "version": 1,
+            "label": "Player profile",
+            "title": "Load the context behind a player session",
+            "summary": "Read a player document by key. Keep session authorization in the application and choose read consistency according to the business action.",
+            "nodes": [
+              [
+                "Player",
+                "Synthetic player-042",
+                "gamepad-2",
+                "amber"
+              ],
+              [
+                "Game application",
+                "Authorizes the request",
+                "app-window",
+                "violet"
+              ],
+              [
+                "Player table",
+                "Profile document",
+                "database",
+                "teal"
+              ]
+            ],
+            "edges": [
+              "Session request",
+              "Read by key"
+            ],
+            "note": "A profile read does not authorize a purchase or establish a globally consistent wallet.",
+            "json": {
+              "label": "JSON · illustrative outcome",
+              "text": "{\n  \"playerId\": \"player-042\",\n  \"profile\": {\n    \"displayName\": \"Nova\",\n    \"level\": 8\n  }\n}",
+              "prerequisites": "Synthetic fixture. This is not a response from OCI."
+            },
+            "sources": [
+              "concepts",
+              "global"
+            ]
+          },
+          "global": {
+            "id": "patterns.gaming.v1.global",
+            "version": 1,
+            "label": "Regional conflict",
+            "title": "Make concurrent profile changes explicit",
+            "summary": "Two regions update the same player row in this synthetic example. Regional replication resolves the conflict using the later write timestamp.",
+            "nodes": [
+              [
+                "Region A",
+                "Earlier write: blue theme",
+                "database",
+                "teal"
+              ],
+              [
+                "Regional replication",
+                "Asynchronous conflict resolution",
+                "repeat-2",
+                "violet"
+              ],
+              [
+                "Region B",
+                "Later write: green theme",
+                "database",
+                "teal"
+              ]
+            ],
+            "edges": [
+              "Earlier update",
+              "Later update wins"
+            ],
+            "note": "The earlier blue-theme update is superseded in this example. Design high-value state around the required correctness rules.",
+            "json": {
+              "label": "JSON · illustrative outcome",
+              "text": "{\n  \"playerId\": \"player-042\",\n  \"theme\": \"green\",\n  \"explanation\": \"Later timestamp wins after convergence\"\n}",
+              "prerequisites": "Synthetic fixture. This is not a response from OCI."
+            },
+            "sources": [
+              "concepts",
+              "global"
+            ]
+          }
+        }
+      },
+      "social": {
+        "label": "Social",
+        "summary": "Evolve member profiles with clear visibility rules.",
+        "sources": [
+          "concepts",
+          "global",
+          "security"
+        ],
+        "help": {
+          "Illustrative workload": "A synthetic application design, not a deployed solution or measured performance result.",
+          "JSON document": "Flexible data stored inside a typed JSON column; primary-key and access design still apply.",
+          "Regional freshness": "A nearby regional replica may not yet include a recent change from another region."
+        },
+        "panelTitle": "Social · flexible profiles, local access",
+        "panelSummary": "",
+        "pillar": "Application story · illustrative",
+        "badge": "Synthetic data",
+        "renderer": "social",
+        "benefits": [
+          "Add optional profile fields without flattening every attribute.",
+          "Use local regional access for distributed application audiences."
+        ],
+        "considerations": [
+          "Privacy and visibility filtering belong in the authorized application path.",
+          "Design indexes and conflict handling; this is not a complete social-feed engine."
+        ],
+        "scenarios": {
+          "profile": {
+            "id": "patterns.social.v1.profile",
+            "version": 1,
+            "label": "Flexible profiles",
+            "title": "Let profile details evolve with the product",
+            "summary": "Keep a stable identity key while storing optional profile attributes in JSON. Your application still validates fields and enforces visibility.",
+            "nodes": [
+              [
+                "Member",
+                "Synthetic member-008",
+                "users",
+                "amber"
+              ],
+              [
+                "Social application",
+                "Visibility and validation",
+                "shield-check",
+                "violet"
+              ],
+              [
+                "Profile document",
+                "Typed key + JSON fields",
+                "file-json",
+                "teal"
+              ]
+            ],
+            "edges": [
+              "Profile request",
+              "Authorized data access"
+            ],
+            "note": "Flexible JSON accommodates optional fields. It does not remove access checks or the need to design indexes for query paths.",
+            "json": {
+              "label": "JSON · illustrative outcome",
+              "text": "{\n  \"memberId\": \"member-008\",\n  \"profile\": {\n    \"name\": \"Ari\",\n    \"interests\": [\n      \"cycling\",\n      \"photography\"\n    ]\n  }\n}",
+              "prerequisites": "Synthetic fixture. This is not a response from OCI."
+            },
+            "sources": [
+              "concepts",
+              "global",
+              "security"
+            ]
+          },
+          "regional": {
+            "id": "patterns.social.v1.regional",
+            "version": 1,
+            "label": "Local regional access",
+            "title": "Serve a traveling member closer to home",
+            "summary": "A regional replica lets the application read and write near a member. A recent change made elsewhere may take time to appear.",
+            "nodes": [
+              [
+                "Traveling member",
+                "Application selects a region",
+                "users",
+                "amber"
+              ],
+              [
+                "Nearby replica",
+                "Local read / write",
+                "database",
+                "teal"
+              ],
+              [
+                "Other region",
+                "Replicated profile",
+                "database",
+                "teal"
+              ]
+            ],
+            "edges": [
+              "Regional request",
+              "Asynchronous replication"
+            ],
+            "note": "Application routing selects the endpoint. Global Active Tables do not automatically route a traveling user.",
+            "json": {
+              "label": "JSON · illustrative outcome",
+              "text": "{\n  \"memberId\": \"member-008\",\n  \"view\": \"Nearby regional replica\",\n  \"freshness\": \"Remote changes eventually converge\"\n}",
+              "prerequisites": "Synthetic fixture. This is not a response from OCI."
+            },
+            "sources": [
+              "concepts",
+              "global",
+              "security"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "overview": {
+    "page": {
+      "label": "Overview",
+      "title": "Overview",
+      "hero": "Build application stories around useful data",
+      "summary": "Explore how OCI NoSQL supports application data, then examine the choices behind IoT, gaming and social experiences.",
+      "icon": "layout-grid",
+      "sources": [
+        "concepts"
+      ],
+      "help": {
+        "Table": "A collection of rows with a primary key and data fields.",
+        "JSON": "Flexible document content can sit alongside typed columns.",
+        "Scope": "The examples illustrate application decisions; controls advance the story."
+      }
+    },
+    "journeys": {
+      "overview": {
+        "label": "Overview",
+        "title": "Overview",
+        "hero": "Build application stories around useful data",
+        "summary": "Explore how OCI NoSQL supports application data, then examine the choices behind IoT, gaming and social experiences.",
+        "icon": "layout-grid",
+        "sources": [
+          "concepts"
+        ],
+        "help": {
+          "Table": "A collection of rows with a primary key and data fields.",
+          "JSON": "Flexible document content can sit alongside typed columns.",
+          "Scope": "The examples illustrate application decisions; controls advance the story."
+        }
+      },
+      "availability": {
+        "label": "Availability",
+        "summary": "Choose regional reach and capacity to fit the way your application grows.",
+        "scenarios": {
+          "regional": {
+            "id": "availability.regional",
+            "version": 1,
+            "label": "Regional access",
+            "title": "Regional access",
+            "summary": "Start with one regional endpoint when users and application dependencies fit that region.",
+            "nodes": [
+              [
+                "Application",
+                "Owns requests and retry decisions",
+                "app-window",
+                "violet"
+              ],
+              [
+                "NoSQL table",
+                "Rows and JSON documents",
+                "database",
+                "teal"
+              ],
+              [
+                "Application result",
+                "Check before proceeding",
+                "check",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Request",
+              "Respond"
+            ],
+            "steps": [
+              [
+                "Choose a region",
+                "Place the application and table deliberately."
+              ],
+              [
+                "Use the regional endpoint",
+                "Oracle maintains redundancy inside the region."
+              ],
+              [
+                "Handle the result",
+                "Application error handling remains necessary."
+              ]
+            ],
+            "outcome": "Managed regional redundancy supports regional access.",
+            "consideration": "Regional redundancy is not a separate-region recovery plan.",
+            "sources": [
+              "features"
+            ],
+            "initial": {
+              "route": "region-a"
+            },
+            "expected": {
+              "route": "region-a",
+              "customerPromotion": false
+            }
+          },
+          "global": {
+            "id": "availability.global",
+            "version": 1,
+            "label": "Global Active Tables",
+            "title": "Global Active Tables",
+            "summary": "Explore two active regions without implying a single worldwide transaction boundary.",
+            "nodes": [
+              [
+                "Application",
+                "Owns requests and retry decisions",
+                "app-window",
+                "violet"
+              ],
+              [
+                "NoSQL table",
+                "Rows and JSON documents",
+                "database",
+                "teal"
+              ],
+              [
+                "Application result",
+                "Check before proceeding",
+                "check",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Route",
+              "Replicate"
+            ],
+            "steps": [
+              [
+                "Prepare replicas",
+                "Freeze the schema, grant regional permissions and wait for initialization."
+              ],
+              [
+                "Write locally",
+                "The sender completes its write without waiting for remote delivery."
+              ],
+              [
+                "Observe propagation",
+                "The example reaches a common value; delivery time is not a guarantee."
+              ]
+            ],
+            "outcome": "Serve applications through regional read/write replicas.",
+            "consideration": "Applications select endpoints and account for concurrent updates.",
+            "states": [
+              {
+                "routing": "Applications choose their regional endpoints",
+                "a": "Read / write · profile = blue",
+                "b": "Read / write · profile = blue",
+                "link": "Frozen schema; replicas initialized before use."
+              },
+              {
+                "routing": "Region A accepts an update locally",
+                "a": "Read / write · profile = green",
+                "b": "Read / write · profile = blue",
+                "link": "Asynchronous delivery: Region B may still show the older value."
+              },
+              {
+                "routing": "Replicas converge in this illustrative state",
+                "a": "Read / write · profile = green",
+                "b": "Read / write · profile = green",
+                "link": "Elapsed time is unspecified. Absolute reads remain local to a region."
+              }
+            ],
+            "sources": [
+              "global"
+            ],
+            "initial": {
+              "a": "blue",
+              "b": "blue"
+            },
+            "expected": {
+              "a": "green",
+              "b": "green",
+              "globalAbsolute": false
+            }
+          },
+          "provisioned": {
+            "id": "availability.provisioned",
+            "version": 1,
+            "label": "Provisioned capacity",
+            "title": "Provisioned capacity",
+            "summary": "Specify Read Units and Write Units for an understood workload.",
+            "nodes": [
+              [
+                "Workload demand",
+                "Measure reads, writes and stored data",
+                "activity",
+                "violet"
+              ],
+              [
+                "Table capacity",
+                "Customer sizes throughput",
+                "gauge",
+                "teal"
+              ],
+              [
+                "Storage limit",
+                "Size separately from throughput",
+                "database",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Size",
+              "Review"
+            ],
+            "steps": [
+              [
+                "Measure demand",
+                "Estimate operation mix and data sizes."
+              ],
+              [
+                "Choose capacity",
+                "Customer sizes throughput."
+              ],
+              [
+                "Review storage",
+                "Track growth independently and revisit the table limits."
+              ]
+            ],
+            "outcome": "Match the capacity approach to demand and operating preferences.",
+            "consideration": "On-demand is not unlimited capacity; key distribution still matters.",
+            "sources": [
+              "concepts"
+            ],
+            "initial": {
+              "mode": "provisioned"
+            },
+            "expected": {
+              "mode": "provisioned",
+              "storageSeparate": true
+            }
+          },
+          "ondemand": {
+            "id": "availability.ondemand",
+            "version": 1,
+            "label": "On-demand capacity",
+            "title": "On-demand capacity",
+            "summary": "Let the service manage read/write capacity for changing demand.",
+            "nodes": [
+              [
+                "Workload demand",
+                "Measure reads, writes and stored data",
+                "activity",
+                "violet"
+              ],
+              [
+                "Table capacity",
+                "Oracle manages throughput",
+                "gauge",
+                "teal"
+              ],
+              [
+                "Storage limit",
+                "Size separately from throughput",
+                "database",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Size",
+              "Review"
+            ],
+            "steps": [
+              [
+                "Measure demand",
+                "Estimate operation mix and data sizes."
+              ],
+              [
+                "Choose capacity",
+                "Oracle manages throughput."
+              ],
+              [
+                "Review storage",
+                "Track growth independently and revisit the table limits."
+              ]
+            ],
+            "outcome": "Match the capacity approach to demand and operating preferences.",
+            "consideration": "On-demand is not unlimited capacity; key distribution still matters.",
+            "sources": [
+              "concepts"
+            ],
+            "initial": {
+              "mode": "ondemand"
+            },
+            "expected": {
+              "mode": "ondemand",
+              "storageSeparate": true
+            }
+          },
+          "dedicated": {
+            "id": "availability.dedicated",
+            "version": 1,
+            "label": "Dedicated environment",
+            "title": "Dedicated environment",
+            "summary": "Evaluate tenancy isolation for demanding workloads and operating requirements.",
+            "nodes": [
+              [
+                "Tenancy",
+                "Owns environment request",
+                "building",
+                "violet"
+              ],
+              [
+                "Dedicated endpoint",
+                "Separate hosted environment",
+                "network",
+                "teal"
+              ],
+              [
+                "Dedicated resources",
+                "Capacity scoped to the tenancy",
+                "database",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Provision",
+              "Connect"
+            ],
+            "steps": [
+              [
+                "Evaluate fit",
+                "Review workload needs and commercial terms with Oracle."
+              ],
+              [
+                "Prepare application access",
+                "Use the assigned endpoint and appropriate permissions."
+              ],
+              [
+                "Choose compatible capabilities",
+                "Global Active Tables are not supported in this environment."
+              ]
+            ],
+            "outcome": "Evaluate resources dedicated to one tenancy.",
+            "consideration": "A CMEK-enabled environment requires specific configuration; dedicated does not imply global replication.",
+            "sources": [
+              "features",
+              "cmek"
+            ],
+            "initial": {
+              "dedicated": false
+            },
+            "expected": {
+              "dedicated": true,
+              "globalActive": false
+            }
+          }
+        },
+        "sources": [
+          "concepts",
+          "global",
+          "features"
+        ],
+        "help": {
+          "Singleton": "A table without a replica in another region.",
+          "Global Active Table": "A table with regional read/write replicas.",
+          "Read / Write Units": "Throughput capacity units; storage is a separate limit."
+        },
+        "benefits": [
+          "Regional redundancy is service-managed.",
+          "Capacity mode can follow the workload."
+        ],
+        "considerations": [
+          "Shard-key choices influence load distribution.",
+          "Regional replication adds application coordination."
+        ],
+        "comparison": {
+          "headers": [
+            "Choice",
+            "Best fit",
+            "Ownership / consideration"
+          ],
+          "rows": [
+            [
+              "Regional table",
+              "Application dependencies in one region",
+              "Oracle handles internal replicas; application handles errors."
+            ],
+            [
+              "Global Active Tables",
+              "Users in multiple regions",
+              "Frozen schema, initialized replicas and application routing; async conflicts."
+            ],
+            [
+              "Provisioned",
+              "Demand can be planned",
+              "Choose Read Units, Write Units and storage."
+            ],
+            [
+              "On-demand",
+              "Demand changes",
+              "Service manages throughput; storage and service limits remain."
+            ],
+            [
+              "Dedicated hosted",
+              "Tenancy resource isolation",
+              "Separate endpoint; excludes Global Active Tables."
+            ]
+          ]
+        },
+        "renderer": "scenario",
+        "pillar": "Foundation",
+        "tone": "teal",
+        "tags": [
+          "Placement",
+          "Capacity"
+        ],
+        "title": "Availability & scale",
+        "hero": "Match regional reach to application demand",
+        "icon": "network"
+      },
+      "recovery": {
+        "label": "Recovery",
+        "summary": "Plan how applications resume and how retained data is checked before reuse.",
+        "scenarios": {
+          "redirect": {
+            "id": "recovery.redirect",
+            "version": 1,
+            "label": "Regional disruption",
+            "title": "Regional disruption",
+            "summary": "Follow application-owned redirection when a prepared regional replica remains reachable.",
+            "nodes": [
+              [
+                "Application",
+                "Owns requests and retry decisions",
+                "app-window",
+                "violet"
+              ],
+              [
+                "NoSQL table",
+                "Rows and JSON documents",
+                "database",
+                "teal"
+              ],
+              [
+                "Application result",
+                "Check before proceeding",
+                "check",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Detect",
+              "Redirect"
+            ],
+            "steps": [
+              [
+                "Prepare",
+                "Test regional IAM, capacity, endpoints and application dependencies."
+              ],
+              [
+                "Detect disruption",
+                "Use application evidence; decide whether and how to retry uncertain writes."
+              ],
+              [
+                "Redirect and verify",
+                "Route to the surviving region and validate user-visible state."
+              ]
+            ],
+            "outcome": "A prepared application can use another regional replica.",
+            "consideration": "Asynchronous replication leaves a possible freshness gap; no RPO or RTO is promised.",
+            "states": [
+              {
+                "routing": "Application traffic uses Region A",
+                "a": "Read / write · available",
+                "b": "Read / write · available",
+                "link": "A second initialized replica and application routing plan already exist."
+              },
+              {
+                "routing": "Application detects an unavailable Region A endpoint",
+                "a": "Unavailable to this application",
+                "b": "Read / write · available",
+                "failed": "A",
+                "link": "Cross-region delivery may be interrupted. No replica is promoted."
+              },
+              {
+                "routing": "Application redirects requests to Region B",
+                "a": "Unavailable to this application",
+                "b": "Read / write · serving redirected traffic",
+                "failed": "A",
+                "link": "Region B can lack updates not yet replicated. Reconcile uncertain writes before retrying."
+              }
+            ],
+            "runbook": [
+              "Validate the surviving replica and dependent services.",
+              "Change application routing; reconcile uncertain outcomes.",
+              "Monitor redirected traffic and plan a controlled return."
+            ],
+            "sources": [
+              "global"
+            ],
+            "initial": {
+              "route": "a"
+            },
+            "expected": {
+              "route": "b",
+              "promoted": false
+            }
+          },
+          "export": {
+            "id": "recovery.export",
+            "version": 1,
+            "label": "Retained export",
+            "title": "Retained export",
+            "summary": "Recover selected data from a customer-retained copy after application validation.",
+            "nodes": [
+              [
+                "Retained JSON",
+                "Customer owns copy and retention",
+                "files",
+                "violet"
+              ],
+              [
+                "Migrator import",
+                "Writes to a reviewed target table",
+                "arrow-right-left",
+                "teal"
+              ],
+              [
+                "Validation gate",
+                "Compare records and application behavior",
+                "clipboard-check",
+                "amber"
+              ],
+              [
+                "Application cutover",
+                "Owner chooses whether to proceed",
+                "app-window",
+                "coral"
+              ]
+            ],
+            "edges": [
+              "Load",
+              "Check",
+              "Approve"
+            ],
+            "steps": [
+              [
+                "Select a copy",
+                "Choose a usable export and account for changes since it was captured."
+              ],
+              [
+                "Import deliberately",
+                "Use a compatible target and permissions; review TTL metadata."
+              ],
+              [
+                "Validate",
+                "Check keys, counts, representative documents and application reads."
+              ],
+              [
+                "Approve cutover",
+                "Proceed only after validation and rollback planning."
+              ]
+            ],
+            "outcome": "A retained copy provides a separate data-recovery path.",
+            "consideration": "Migrator does not lock source writes; coordinate capture. This is not point-in-time restore.",
+            "runbook": [
+              "Retain and protect exports independently of the live table.",
+              "Import into a reviewed target and check rejected records.",
+              "Validate before redirecting applications."
+            ],
+            "sources": [
+              "migrator"
+            ],
+            "initial": {
+              "targetRows": 0
+            },
+            "expected": {
+              "targetRows": 2,
+              "cutover": "requires-approval"
+            },
+            "code": {
+              "label": "Bash · import example",
+              "text": "./runMigrator --config /path/to/recovery.json",
+              "prerequisites": "Documented Migrator 1.8.0 interface. Java 11+ and Bash; reviewed config, source access, target write permissions and schema required. Path is a placeholder; configuration and credentials omitted. Running externally would write target rows."
+            }
+          }
+        },
+        "sources": [
+          "global",
+          "migrator"
+        ],
+        "help": {
+          "RPO": "The amount of recent data a recovery may lack; no numeric objective is established here.",
+          "RTO": "Time until the application is usable again; includes routing, dependencies and validation.",
+          "Export": "A customer-retained copy, with capture and retention responsibilities."
+        },
+        "benefits": [
+          "Prepared regional access can support continuity.",
+          "A separate copy supports data recovery decisions."
+        ],
+        "considerations": [
+          "Replication can also propagate unwanted changes.",
+          "Export consistency and application cutover need ownership."
+        ],
+        "comparison": {
+          "headers": [
+            "Pattern",
+            "Recovery-point posture",
+            "Recovery-time posture",
+            "Best fit",
+            "Operator action"
+          ],
+          "rows": [
+            [
+              "Regional redirection",
+              "Async replica may lack recent updates",
+              "Detection and application redirection; unspecified",
+              "Regional endpoint disruption",
+              "Validate surviving region; reconcile uncertain writes."
+            ],
+            [
+              "Retained export / reimport",
+              "Data since the selected capture may be absent",
+              "Import and application validation; unspecified",
+              "Recover reviewed retained data",
+              "Coordinate capture; verify target; approve cutover."
+            ]
+          ]
+        },
+        "renderer": "scenario",
+        "pillar": "Protect",
+        "tone": "coral",
+        "tags": [
+          "Continuity",
+          "Retained copies"
+        ],
+        "title": "Data protection & disaster recovery",
+        "hero": "Prepare recovery before your application needs it",
+        "icon": "shield-check"
+      },
+      "migration": {
+        "label": "Migration",
+        "summary": "Move data through a supported path and keep application cutover a deliberate decision.",
+        "scenarios": {
+          "json": {
+            "id": "migration.json",
+            "version": 1,
+            "label": "JSON file import",
+            "title": "JSON file import",
+            "summary": "Move table data, then independently validate the application before switching traffic.",
+            "nodes": [
+              [
+                "Reviewed JSON file",
+                "Source owner coordinates writes",
+                "files",
+                "violet"
+              ],
+              [
+                "Migrator 1.8.0",
+                "Reads source; writes target",
+                "arrow-right-left",
+                "teal"
+              ],
+              [
+                "Target table",
+                "Validate schema and records",
+                "database",
+                "amber"
+              ],
+              [
+                "Application",
+                "Approve or hold cutover",
+                "app-window",
+                "coral"
+              ]
+            ],
+            "edges": [
+              "Transfer",
+              "Validate",
+              "Decide"
+            ],
+            "steps": [
+              [
+                "Prepare",
+                "Review schema mapping, permissions and a consistent capture window."
+              ],
+              [
+                "Transfer",
+                "Run a reviewed migration outside this showcase; inspect rejected records."
+              ],
+              [
+                "Validate",
+                "Compare primary keys, representative documents and application behavior."
+              ],
+              [
+                "Cut over or hold",
+                "If validation fails, keep traffic on the source and investigate."
+              ]
+            ],
+            "outcome": "Separate data movement from the application cutover decision.",
+            "consideration": "Format support does not establish API compatibility, continuous replication or automatic cutover.",
+            "sources": [
+              "migrator",
+              "release"
+            ],
+            "runbook": [
+              "Coordinate source writes and protect the original data.",
+              "Review errors and validate the target before use.",
+              "Approve cutover and retain an explicit rollback plan."
+            ],
+            "initial": {
+              "sourceRows": 2,
+              "targetRows": 0
+            },
+            "expected": {
+              "sourceRows": 2,
+              "targetRows": 2,
+              "failedValidationAction": "hold-cutover"
+            },
+            "code": {
+              "label": "Bash · JSON file import",
+              "text": "./runMigrator --config /path/to/json.json",
+              "prerequisites": "Migrator 1.8.0 documented interface; Java 11+ and Bash. Placeholder path to separately reviewed config; credentials, schema and connection details omitted. Real execution reads the source and writes the target; cloud export consumes Read Units."
+            },
+            "json": {
+              "label": "JSON · illustrative validation result",
+              "text": "{\n  \"sourceRows\": 2,\n  \"targetRows\": 2,\n  \"rejectedRows\": 0,\n  \"applicationChecks\": \"pending\",\n  \"cutoverApproved\": false\n}",
+              "prerequisites": "Synthetic application data; display only. This is not an SDK response."
+            }
+          },
+          "onprem": {
+            "id": "migration.onprem",
+            "version": 1,
+            "label": "On-premises NoSQL",
+            "title": "On-premises NoSQL",
+            "summary": "Move table data, then independently validate the application before switching traffic.",
+            "nodes": [
+              [
+                "On-premises table",
+                "Source owner coordinates writes",
+                "files",
+                "violet"
+              ],
+              [
+                "Migrator 1.8.0",
+                "Reads source; writes target",
+                "arrow-right-left",
+                "teal"
+              ],
+              [
+                "Target table",
+                "Validate schema and records",
+                "database",
+                "amber"
+              ],
+              [
+                "Application",
+                "Approve or hold cutover",
+                "app-window",
+                "coral"
+              ]
+            ],
+            "edges": [
+              "Transfer",
+              "Validate",
+              "Decide"
+            ],
+            "steps": [
+              [
+                "Prepare",
+                "Review schema mapping, permissions and a consistent capture window."
+              ],
+              [
+                "Transfer",
+                "Run a reviewed migration outside this showcase; inspect rejected records."
+              ],
+              [
+                "Validate",
+                "Compare primary keys, representative documents and application behavior."
+              ],
+              [
+                "Cut over or hold",
+                "If validation fails, keep traffic on the source and investigate."
+              ]
+            ],
+            "outcome": "Separate data movement from the application cutover decision.",
+            "consideration": "Format support does not establish API compatibility, continuous replication or automatic cutover.",
+            "sources": [
+              "migrator",
+              "release"
+            ],
+            "runbook": [
+              "Coordinate source writes and protect the original data.",
+              "Review errors and validate the target before use.",
+              "Approve cutover and retain an explicit rollback plan."
+            ],
+            "initial": {
+              "sourceRows": 2,
+              "targetRows": 0
+            },
+            "expected": {
+              "sourceRows": 2,
+              "targetRows": 2,
+              "failedValidationAction": "hold-cutover"
+            },
+            "code": {
+              "label": "Bash · On-premises NoSQL",
+              "text": "./runMigrator --config /path/to/onprem.json",
+              "prerequisites": "Migrator 1.8.0 documented interface; Java 11+ and Bash. Placeholder path to separately reviewed config; credentials, schema and connection details omitted. Real execution reads the source and writes the target; cloud export consumes Read Units."
+            },
+            "json": {
+              "label": "JSON · illustrative validation result",
+              "text": "{\n  \"sourceRows\": 2,\n  \"targetRows\": 2,\n  \"rejectedRows\": 0,\n  \"applicationChecks\": \"pending\",\n  \"cutoverApproved\": false\n}",
+              "prerequisites": "Synthetic application data; display only. This is not an SDK response."
+            }
+          }
+        },
+        "sources": [
+          "migrator",
+          "release"
+        ],
+        "help": {
+          "Source": "The data location read by Migrator.",
+          "Sink": "The destination written by Migrator.",
+          "Cutover": "An application-owned switch after validation."
+        },
+        "benefits": [
+          "One documented tool supports several data sources.",
+          "Validation can precede application traffic changes."
+        ],
+        "considerations": [
+          "Source writes need coordination.",
+          "Data format support is not application compatibility."
+        ],
+        "comparison": {
+          "headers": [
+            "Path",
+            "Preparation",
+            "Target effect",
+            "Cutover gate"
+          ],
+          "rows": [
+            [
+              "JSON file → cloud",
+              "Review row shape, keys and target schema",
+              "Writes rows to target table",
+              "Records and application behavior validated."
+            ],
+            [
+              "On-premises NoSQL → cloud",
+              "Review schema, access and capture window",
+              "Copies table data to cloud",
+              "Application/API behavior checked; rollback planned."
+            ]
+          ]
+        },
+        "renderer": "scenario",
+        "pillar": "Move",
+        "tone": "teal",
+        "tags": [
+          "Data transfer",
+          "Validation"
+        ],
+        "title": "Migration & modernization",
+        "hero": "Move data with a deliberate cutover",
+        "icon": "arrow-right-left"
+      },
+      "observability": {
+        "label": "Observability",
+        "summary": "Use service signals and application evidence to decide who should investigate and act.",
+        "scenarios": {
+          "detect": {
+            "id": "observability.detect",
+            "version": 1,
+            "label": "Detect",
+            "title": "Detect",
+            "summary": "Use scoped service metrics with application evidence and a named response owner.",
+            "nodes": [
+              [
+                "Application",
+                "Owns requests and retry decisions",
+                "app-window",
+                "violet"
+              ],
+              [
+                "NoSQL table",
+                "Rows and JSON documents",
+                "database",
+                "teal"
+              ],
+              [
+                "Application result",
+                "Check before proceeding",
+                "check",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Inspect",
+              "Respond"
+            ],
+            "steps": [
+              [
+                "Notice a signal",
+                "Three synthetic read throttles warrant investigation."
+              ],
+              [
+                "Check context",
+                "Confirm table and interval; storage telemetry is missing."
+              ],
+              [
+                "Assign response",
+                "The application operations team owns the next investigation."
+              ]
+            ],
+            "outcome": "Identify a question worth investigating.",
+            "consideration": "A missing sample is unknown; throttling alone does not prove an outage.",
+            "sources": [
+              "monitoring"
+            ],
+            "samples": [
+              {
+                "name": "ReadThrottleCount",
+                "value": 3,
+                "unit": "exceptions",
+                "statistic": "sum / 5 min"
+              },
+              {
+                "name": "WriteThrottleCount",
+                "value": 0,
+                "unit": "exceptions",
+                "statistic": "sum / 5 min"
+              },
+              {
+                "name": "StorageGB",
+                "value": null,
+                "unit": "GB",
+                "statistic": "maximum / 5 min"
+              }
+            ],
+            "initial": {
+              "reviewed": false
+            },
+            "expected": {
+              "reviewed": true,
+              "missingStorage": "unknown"
+            },
+            "runbook": [
+              "Confirm region, table, timestamp, statistic and interval.",
+              "Correlate demand, key distribution and application errors.",
+              "Assign an owner; measure the result of any approved change."
+            ],
+            "code": {
+              "label": "MQL · table-scoped read throttles",
+              "text": "ReadThrottleCount[5m]{tableName=\"device_readings\"}.sum()",
+              "prerequisites": "Display only. OCI Monitoring permissions and the correct table/region are required for a real query. This example counts exceptions in each interval; it is not request latency."
+            }
+          },
+          "investigate": {
+            "id": "observability.investigate",
+            "version": 1,
+            "label": "Investigate",
+            "title": "Investigate",
+            "summary": "Use scoped service metrics with application evidence and a named response owner.",
+            "nodes": [
+              [
+                "Application",
+                "Owns requests and retry decisions",
+                "app-window",
+                "violet"
+              ],
+              [
+                "NoSQL table",
+                "Rows and JSON documents",
+                "database",
+                "teal"
+              ],
+              [
+                "Application result",
+                "Check before proceeding",
+                "check",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Inspect",
+              "Respond"
+            ],
+            "steps": [
+              [
+                "Correlate",
+                "Compare request errors and workload demand with this window."
+              ],
+              [
+                "Inspect access",
+                "Review queries, document sizes and hot shard keys."
+              ],
+              [
+                "Form a hypothesis",
+                "Record a likely cause and the evidence still missing."
+              ]
+            ],
+            "outcome": "Connect service measurements to application behavior.",
+            "consideration": "A missing sample is unknown; throttling alone does not prove an outage.",
+            "sources": [
+              "monitoring"
+            ],
+            "samples": [
+              {
+                "name": "ReadThrottleCount",
+                "value": 3,
+                "unit": "exceptions",
+                "statistic": "sum / 5 min"
+              },
+              {
+                "name": "WriteThrottleCount",
+                "value": 0,
+                "unit": "exceptions",
+                "statistic": "sum / 5 min"
+              },
+              {
+                "name": "StorageGB",
+                "value": null,
+                "unit": "GB",
+                "statistic": "maximum / 5 min"
+              }
+            ],
+            "initial": {
+              "reviewed": false
+            },
+            "expected": {
+              "reviewed": true,
+              "missingStorage": "unknown"
+            },
+            "runbook": [
+              "Confirm region, table, timestamp, statistic and interval.",
+              "Correlate demand, key distribution and application errors.",
+              "Assign an owner; measure the result of any approved change."
+            ],
+            "code": {
+              "label": "MQL · table-scoped read throttles",
+              "text": "ReadThrottleCount[5m]{tableName=\"device_readings\"}.sum()",
+              "prerequisites": "Display only. OCI Monitoring permissions and the correct table/region are required for a real query. This example counts exceptions in each interval; it is not request latency."
+            }
+          },
+          "improve": {
+            "id": "observability.improve",
+            "version": 1,
+            "label": "Improve",
+            "title": "Improve",
+            "summary": "Use scoped service metrics with application evidence and a named response owner.",
+            "nodes": [
+              [
+                "Application",
+                "Owns requests and retry decisions",
+                "app-window",
+                "violet"
+              ],
+              [
+                "NoSQL table",
+                "Rows and JSON documents",
+                "database",
+                "teal"
+              ],
+              [
+                "Application result",
+                "Check before proceeding",
+                "check",
+                "amber"
+              ]
+            ],
+            "edges": [
+              "Inspect",
+              "Respond"
+            ],
+            "steps": [
+              [
+                "Choose a change",
+                "Review capacity, indexing or key-model changes with the owner."
+              ],
+              [
+                "Apply elsewhere",
+                "Approved changes require a separate operational process."
+              ],
+              [
+                "Measure again",
+                "Compare the same scope and aggregation after the change."
+              ]
+            ],
+            "outcome": "Close the loop with a measured operational decision.",
+            "consideration": "A missing sample is unknown; throttling alone does not prove an outage.",
+            "sources": [
+              "monitoring"
+            ],
+            "samples": [
+              {
+                "name": "ReadThrottleCount",
+                "value": 3,
+                "unit": "exceptions",
+                "statistic": "sum / 5 min"
+              },
+              {
+                "name": "WriteThrottleCount",
+                "value": 0,
+                "unit": "exceptions",
+                "statistic": "sum / 5 min"
+              },
+              {
+                "name": "StorageGB",
+                "value": null,
+                "unit": "GB",
+                "statistic": "maximum / 5 min"
+              }
+            ],
+            "initial": {
+              "reviewed": false
+            },
+            "expected": {
+              "reviewed": true,
+              "missingStorage": "unknown"
+            },
+            "runbook": [
+              "Confirm region, table, timestamp, statistic and interval.",
+              "Correlate demand, key distribution and application errors.",
+              "Assign an owner; measure the result of any approved change."
+            ],
+            "code": {
+              "label": "MQL · table-scoped read throttles",
+              "text": "ReadThrottleCount[5m]{tableName=\"device_readings\"}.sum()",
+              "prerequisites": "Display only. OCI Monitoring permissions and the correct table/region are required for a real query. This example counts exceptions in each interval; it is not request latency."
+            }
+          }
+        },
+        "sources": [
+          "monitoring"
+        ],
+        "help": {
+          "ReadThrottleCount": "Read throttling exceptions in the selected window.",
+          "StorageGB": "Storage gauge; missing data remains unknown, and reported values can be truncated.",
+          "Monitoring": "Service metrics; application logs and request traces supply separate context."
+        },
+        "benefits": [
+          "Table scope keeps investigations specific.",
+          "Repeatable windows help assess a change."
+        ],
+        "considerations": [
+          "Synthetic samples are not measured service performance.",
+          "An alarm needs an owner and a response process."
+        ],
+        "comparison": {
+          "headers": [
+            "Signal",
+            "Interpretation",
+            "Owner response"
+          ],
+          "rows": [
+            [
+              "Read / write throttles",
+              "Capacity-related exceptions in the window",
+              "Application team checks demand and key/query access."
+            ],
+            [
+              "StorageGB",
+              "Storage usage gauge; missing is unknown",
+              "Operations verifies collection and growth."
+            ],
+            [
+              "Application errors",
+              "Separate request evidence",
+              "Application owner correlates retries and user impact."
+            ]
+          ]
+        },
+        "renderer": "scenario",
+        "pillar": "Operate",
+        "tone": "teal",
+        "tags": [
+          "Signals",
+          "Runbooks"
+        ],
+        "title": "Observability & operations",
+        "hero": "Turn table signals into owned actions",
+        "icon": "activity"
+      },
+      "security": {
+        "label": "Security",
+        "title": "Security & governance",
+        "hero": "Assign clear ownership across protection layers",
+        "summary": "Match controls to the boundary they protect and identify who keeps them effective.",
+        "icon": "lock-keyhole",
+        "pillar": "Govern",
+        "tone": "violet",
+        "tags": [
+          "IAM",
+          "Encryption"
+        ],
+        "sources": [
+          "security",
+          "cmek"
+        ],
+        "help": {
+          "IAM": "Policies grant specific resource operations within compartments.",
+          "CMEK": "A customer-managed master key in a specifically configured dedicated environment.",
+          "Responsibility": "Oracle manages infrastructure; customers manage policies, data and application behavior."
+        },
+        "layers": [
+          [
+            "Identity & authorization",
+            "Customer: scope IAM permissions to tables, rows and compartments.",
+            "user",
+            "violet"
+          ],
+          [
+            "Transport",
+            "Service: HTTPS. Application: use the appropriate endpoint and protect credentials.",
+            "network",
+            "teal"
+          ],
+          [
+            "Encryption at rest",
+            "Oracle provides encryption at rest. CMEK requires a dedicated environment configured for it.",
+            "key",
+            "amber"
+          ],
+          [
+            "Data lifecycle",
+            "Customer: choose retention, review access and protect retained exports.",
+            "shield-check",
+            "coral"
+          ]
+        ],
+        "comparison": {
+          "headers": [
+            "Control",
+            "Protection",
+            "Responsibility",
+            "Consideration"
+          ],
+          "rows": [
+            [
+              "IAM policies",
+              "Authorized table and row operations",
+              "Customer defines policy; OCI enforces it",
+              "Avoid broader tenancy grants than the application needs."
+            ],
+            [
+              "HTTPS",
+              "Transport encryption",
+              "Service endpoint and application client",
+              "Transport does not replace authorization."
+            ],
+            [
+              "At-rest encryption",
+              "Stored data",
+              "Oracle manages service encryption",
+              "Customer still controls data access."
+            ],
+            [
+              "CMEK",
+              "Customer control over master key",
+              "Customer key lifecycle; Oracle integration",
+              "Requires configured dedicated environment; plan key availability."
+            ],
+            [
+              "Retention / export governance",
+              "Useful lifetime and retained copies",
+              "Customer",
+              "TTL is not a recovery copy."
+            ]
+          ]
+        },
+        "benefits": [
+          "Layered controls clarify protection boundaries.",
+          "Compartment scope helps organize access."
+        ],
+        "considerations": [
+          "Policies require ongoing review.",
+          "Key and data lifecycle decisions remain customer responsibilities."
+        ]
+      },
+      "patterns": {
+        "label": "Workload patterns",
+        "title": "Workload patterns",
+        "hero": "Explore decisions through everyday application stories",
+        "summary": "Choose a workload and follow how its data model, access needs and regional choices shape the experience.",
+        "icon": "blocks",
+        "pillar": "Apply",
+        "tone": "amber",
+        "tags": [
+          "Three workloads",
+          "Data design"
+        ],
+        "sources": [
+          "concepts"
+        ],
+        "help": {
+          "Workload": "An independent application story with its own scenarios."
+        }
+      }
+    },
+    "glance": [
+      [
+        "Flexible rows",
+        "Combine typed keys and columns with JSON document content.",
+        "Data model"
+      ],
+      [
+        "Table throughput",
+        "Choose provisioned or on-demand read and write capacity.",
+        "Capacity"
+      ],
+      [
+        "Regional reach",
+        "Evaluate Global Active Tables for local access across regions.",
+        "Placement"
+      ]
+    ],
+    "flow": [
+      [
+        "People & devices",
+        "Create application events",
+        "users",
+        "violet"
+      ],
+      [
+        "Application",
+        "Owns validation and access",
+        "app-window",
+        "teal"
+      ],
+      [
+        "NoSQL table",
+        "Stores rows and JSON documents",
+        "database",
+        "amber"
+      ]
+    ],
+    "footerSources": [
+      "documentation",
+      "concepts",
+      "features",
+      "releaseNotes"
+    ],
+    "footerReviewDate": "23 November 2026"
+  }
+}
